@@ -34,11 +34,11 @@ stages:
     - curl -fsSL https://pkgs.tailscale.com/stable/debian/sid.tailscale-keyring.list | tee /etc/apt/sources.list.d/tailscale.list
     - apt-get update && apt-get install -y tailscale   
 
-  - name: example-packages # Sample module using the built-in Apt module to install packages
-    type: apt
-    sources:
-      - packages:
-        - vim
+#  - name: example-packages # Sample module using the built-in Apt module to install packages
+#    type: apt
+#    sources:
+#      - packages:
+#        - vim
 
   - name: example-commands # Sample module demonstrating the Shell module with custom commands
     type: shell
